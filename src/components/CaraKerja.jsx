@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Eye,
@@ -69,23 +70,68 @@ const data = [
   },
 ];
 
+// Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.1,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
 const CaraKerja = () => {
   return (
-    <div className="px-4 py-12 bg-gray-50" id="cara-kerja">
+    <div className="px-4 py-12 bg-gray-50" id="carakerja">
       <div className="max-w-6xl mx-auto text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Cara Kerja StockGuard
-        </h2>
-        <p className="text-gray-600">
+        </motion.h2>
+        <motion.p
+          className="text-gray-600"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+          viewport={{ once: true }}
+        >
           Menggabungkan sensor berat dan AI untuk keamanan stok secara
           real-time.
-        </p>
+        </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto cursor-pointer"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         {data.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={itemVariants}
+            custom={index}
             className="group bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             <div className="mb-4">{item.icon}</div>
@@ -93,9 +139,9 @@ const CaraKerja = () => {
               {item.title}
             </h3>
             <p className="text-gray-600 text-sm">{item.desc}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

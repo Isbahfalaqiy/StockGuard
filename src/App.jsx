@@ -9,6 +9,7 @@ import Faq from "./components/Faq";
 import Manfaat from "./components/Manfaat";
 import CaraKerja from "./components/CaraKerja";
 import background from "./assets/images/bg.jpg";
+import css from "./App";
 
 const App = () => {
   return (
@@ -31,11 +32,10 @@ const App = () => {
       {/* About berada di luar div background, jadi tidak terkena background/overlay */}
       <About />
       <Fitur />
-      <CaraKerja/>
+      <CaraKerja />
       <Manfaat />
       <Faq />
       <Contact />
-
       <Footer />
     </>
   );

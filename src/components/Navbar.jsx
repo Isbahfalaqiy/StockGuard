@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { FaShareAlt, FaBars, FaTimes } from "react-icons/fa";
-
+import Guard from "../assets/images/defend.jpg";
+import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState("home");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleMenuClick = (menu) => {
+    setActiveMenu(menu);
+    setIsOpen(false); // Tutup menu mobile setelah klik
   };
 
   return (
@@ -13,37 +19,108 @@ const Navbar = () => {
       <div className="flex items-center justify-between bg-black opacity-85 text-white rounded-full px-6 md:px-12 py-4 max-w-6xl mx-auto shadow-md mt-5">
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold text-xl">
-          <FaShareAlt className="text-2xl text-yellow-400" />
-          <span>StockShare</span>
+          <img src={Guard} className="w-8 h-8" />
+          <span>StockGuard</span>
         </div>
-
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-gray-300 font-medium">
-          <li className="bg-gray-800 text-yellow-400 px-4 py-1 rounded-full cursor-pointer">
-            Home
+        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+          <li>
+            <a
+              href="#"
+              onClick={() => handleMenuClick("home")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "home"
+                  ? "bg-gray-800 text-yellow-400"
+                  : "hover:text-white"
+              }`}
+            >
+              Home
+            </a>
           </li>
-          <li className="hover:text-white cursor-pointer transition">
-            Tentang Kami
+          <li>
+            <a
+              href="#about"
+              onClick={() => handleMenuClick("about")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "about"
+                  ? "text-yellow-400 font-semibold bg-gray-800"
+                  : "hover:text-white"
+              }`}
+            >
+              Tentang Kami
+            </a>
           </li>
-          <li className="hover:text-white cursor-pointer transition">Fitur</li>
-          <li className="hover:text-white cursor-pointer transition">
-            Cara Kerja
+          <li>
+            <a
+              href="#fitur"
+              onClick={() => handleMenuClick("fitur")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "fitur"
+                  ? "text-yellow-400 font-semibold bg-gray-800"
+                  : "hover:text-white"
+              }`}
+            >
+              Fitur
+            </a>
           </li>
-          <li className="hover:text-white cursor-pointer transition">
-            Manfaat
+          <li>
+            <a
+              href="#carakerja"
+              onClick={() => handleMenuClick("carakerja")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "carakerja"
+                  ? "text-yellow-400 font-semibold bg-gray-800"
+                  : "hover:text-white"
+              }`}
+            >
+              Cara Kerja
+            </a>
           </li>
-          <li className="hover:text-white cursor-pointer transition">FAQ</li>
+          <li>
+            <a
+              href="#manfaat"
+              onClick={() => handleMenuClick("manfaat")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "manfaat"
+                  ? "text-yellow-400 font-semibold bg-gray-800"
+                  : "hover:text-white"
+              }`}
+            >
+              Manfaat
+            </a>
+          </li>
+          <li>
+            <a
+              href="#faq"
+              onClick={() => handleMenuClick("faq")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "faq"
+                  ? "text-yellow-400 font-semibold bg-gray-800"
+                  : "hover:text-white"
+              }`}
+            >
+              FAQ
+            </a>
+          </li>
         </ul>
 
         {/* Contact Button - Desktop */}
         <div className="hidden md:block">
-          <button className="bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition cursor-pointer">
+          <a
+            href="#contact"
+            onClick={() => handleMenuClick("contact")}
+            className={`px-6 py-2 rounded-full font-semibold  cursor-pointer ${
+              activeMenu === "contact"
+                ? "bg-gray-800 text-yellow-400"
+                : "bg-white text-black hover:bg-yellow-400"
+            }`}
+          >
             Contact
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden ">
+        <div className="md:hidden">
           <button onClick={toggleMenu} className="cursor-pointer">
             {isOpen ? (
               <FaTimes className="text-2xl" />
@@ -58,26 +135,96 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-black text-white px-6 py-4 space-y-4 mt-2 rounded-xl max-w-6xl mx-auto shadow-lg">
           <ul className="flex flex-col gap-4 font-medium">
-            <li className="bg-gray-800 text-yellow-400 px-4 py-1 rounded-full cursor-pointer">
-              Home
+            <li>
+              <a
+                href="#"
+                onClick={() => handleMenuClick("home")}
+                className={`px-4 py-1 rounded-full cursor-pointer ${
+                  activeMenu === "home"
+                    ? "bg-gray-800 text-yellow-400 font-semibold"
+                    : "hover:text-white"
+                }`}
+              >
+                Home
+              </a>
             </li>
-            <li className="hover:text-white cursor-pointer transition">
-              Tentang Kami
+            <li>
+              <a
+                href="#about"
+                onClick={() => handleMenuClick("about")}
+                className={`px-4 py-1 rounded-full cursor-pointer ${
+                  activeMenu === "about"
+                    ? "text-yellow-400 font-semibold bg-gray-800"
+                    : "hover:text-white"
+                }`}
+              >
+                Tentang Kami
+              </a>
             </li>
-            <li className="hover:text-white cursor-pointer transition">
-              Fitur
+            <li>
+              <a
+                href="#fitur"
+                onClick={() => handleMenuClick("fitur")}
+                className={`px-4 py-1 rounded-full cursor-pointer ${
+                  activeMenu === "fitur"
+                    ? "text-yellow-400 font-semibold bg-gray-800"
+                    : "hover:text-white"
+                }`}
+              >
+                Fitur
+              </a>
             </li>
-            <li className="hover:text-white cursor-pointer transition">
-              Cara Kerja
+            <li>
+              <a
+                href="#carakerja"
+                onClick={() => handleMenuClick("carakerja")}
+                className={`px-4 py-1 rounded-full cursor-pointer ${
+                  activeMenu === "carakerja"
+                    ? "text-yellow-400 font-semibold bg-gray-800"
+                    : "hover:text-white"
+                }`}
+              >
+                Cara Kerja
+              </a>
             </li>
-            <li className="hover:text-white cursor-pointer transition">
-              Manfaat
+            <li>
+              <a
+                href="#manfaat"
+                onClick={() => handleMenuClick("manfaat")}
+                className={`px-4 py-1 rounded-full cursor-pointer ${
+                  activeMenu === "manfaat"
+                    ? "text-yellow-400 font-semibold bg-gray-800"
+                    : "hover:text-white"
+                }`}
+              >
+                Manfaat
+              </a>
             </li>
-            <li className="hover:text-white cursor-pointer transition">FAQ</li>
+            <li>
+              <a
+                href="#faq"
+                onClick={() => handleMenuClick("faq")}
+                className={`px-4 py-1 rounded-full cursor-pointer ${
+                  activeMenu === "faq"
+                    ? "text-yellow-400 font-semibold bg-gray-800"
+                    : "hover:text-white"
+                }`}
+              >
+                FAQ
+              </a>
+            </li>
           </ul>
-          <button className="w-full bg-white text-black py-2 rounded-full font-semibold hover:bg-gray-200 transition">
+          <a
+            href="#contact"
+            onClick={() => handleMenuClick("contact")}
+            className={`w-full block py-2 rounded-full text-center font-semibold px-4  ${
+              activeMenu === "contact"
+                ? "bg-gray-800 text-yellow-400"
+                : "bg-white text-black hover:bg-yellow-400"
+            }`}
+          >
             Contact
-          </button>
+          </a>
         </div>
       )}
     </nav>

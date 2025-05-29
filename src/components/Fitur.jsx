@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import berat from "../assets/images/berat.jpg"; // Gambar ilustrasi
-import analisis from "../assets/images/analisis.jpg"; // Gambar ilustrasi
-import ai from "../assets/images/ai.jpg"; // Gambar ilustrasi
-import stok from "../assets/images/stock.jpg"; // Gambar ilustrasi
-import notifikasi from "../assets/images/notifikasi.jpg"; // Gambar ilustrasi
+import { motion, AnimatePresence } from "framer-motion";
+import berat from "../assets/images/berat.jpg";
+import analisis from "../assets/images/analisis.jpg";
+import ai from "../assets/images/ai.jpg";
+import stok from "../assets/images/stock.jpg";
+import notifikasi from "../assets/images/notifikasi.jpg";
 
-// Struktur yang benar: setiap fitur adalah objek dengan deskripsi dan gambar
 const fiturData = {
   "Pemantauan Berat Otomatis": {
     deskripsi:
@@ -40,52 +40,92 @@ const Fitur = () => {
   );
 
   return (
-    <div className="bg-[#FBFBFB] py-14 px-6 md:px-20">
+    <div className="bg-[#FBFBFB] py-14 px-6 md:px-20" id="fitur">
       <div className="text-center">
-        <h1 className="text-4xl text-yellow-400 font-bold">Fitur</h1>
-        <div className="w-16 h-1 bg-black mx-auto mt-3"></div>
-        <p className="mt-4 text-gray-600">
+        <motion.h1
+          className="text-4xl text-gray-800 font-bold"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          Fitur
+        </motion.h1>
+        <div className="w-16 h-1 text-gray-800 mx-auto mt-3"></div>
+        <motion.p
+          className="mt-4 text-gray-600"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+          viewport={{ once: true }}
+        >
           Fitur Utama Yang Terdapat Pada Website StockGuard
-        </p>
+        </motion.p>
       </div>
 
       {/* Tombol Fitur */}
       <div className="flex justify-center mt-8">
-        <div className="rounded-full px-4 py-2 bg-gray-100 shadow-inner">
-          <div className="flex flex-wrap justify-center gap-4 font-semibold">
+        <motion.div
+          className="rounded-full px-4 py-2 bg-black text-white shadow-inner"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-wrap justify-center gap-4 font-semibold ">
             {Object.keys(fiturData).map((fitur) => (
-              <button
+              <motion.button
                 key={fitur}
                 onClick={() => setSelectedFitur(fitur)}
-                className={`px-4 py-2 rounded-full cursor-pointer transition-colors duration-200 ${
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer ${
                   selectedFitur === fitur
-                    ? "bg-amber-400 text-black"
-                    : "hover:bg-amber-200 text-black"
+                    ? "bg-amber-400 text-white"
+                    : "hover:bg-amber-400 text-white"
                 }`}
               >
                 {fitur}
-              </button>
+              </motion.button>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Deskripsi + Gambar */}
+      {/* Deskripsi + Gambar dengan animasi transisi */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Deskripsi */}
-        <div className="bg-white p-6 rounded-xl shadow-lg text-gray-800 text-lg">
-          <h3 className="text-xl font-bold mb-4">{selectedFitur}</h3>
-          <p className="text-justify">{fiturData[selectedFitur].deskripsi}</p>
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedFitur + "-desc"}
+            className="bg-white p-6 rounded-xl shadow-lg text-gray-800 text-lg"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h3 className="text-xl font-bold mb-4">{selectedFitur}</h3>
+            <p className="text-justify">{fiturData[selectedFitur].deskripsi}</p>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Gambar */}
-        <div className="flex justify-center">
-          <img
-            src={fiturData[selectedFitur].gambar}
-            alt={`Ilustrasi ${selectedFitur}`}
-            className="w-full max-w-md rounded-xl shadow-md"
-          />
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedFitur + "-image"}
+            className="flex justify-center"
+            initial={{ opacity: 0, x: 5 }}
+            animate={{ opacity: 1, x: 5 }}
+            exit={{ opacity: 0, x: 30 }}
+            transition={{ duration: 0.7 }}
+          >
+            <img
+              src={fiturData[selectedFitur].gambar}
+              alt={`Ilustrasi ${selectedFitur}`}
+              className="w-full max-w-md rounded-xl shadow-md"
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

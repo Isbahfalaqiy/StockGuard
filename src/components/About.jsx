@@ -1,18 +1,46 @@
 import React from "react";
-import stockImage from "../assets/images/about.jpg"; // Pastikan path-nya benar
+import stockImage from "../assets/images/about.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center px-6 md:px-28 py-10 bg-[#FBFBFB] gap-8">
+    <div
+      id="about"
+      className="flex flex-col md:flex-row items-center px-6 md:px-28 py-10 bg-[#FBFBFB] gap-8"
+    >
       {/* Teks */}
-      <div className="flex-1">
-        <h1 className="text-xl md:text-2xl text-yellow-400 font-semibold">
+      <motion.div
+        className="flex-1"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.h1
+          className="text-xl md:text-2xl text-yellow-400 font-semibold"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Tentang Kami
-        </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+        </motion.h1>
+        <motion.h2
+          className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+          viewport={{ once: true }}
+        >
           Stock Guard
-        </h2>
-        <p className="text-gray-700 text-justify leading-relaxed">
+        </motion.h2>
+        <motion.p
+          className="text-gray-700 text-justify leading-relaxed"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          viewport={{ once: true }}
+        >
           StockGuard adalah sistem pengamanan stok barang yang menggabungkan
           teknologi sensor berat dan kamera dengan computer vision untuk
           memantau dan melacak pergerakan barang secara real-time. Sistem ini
@@ -21,17 +49,23 @@ const About = () => {
           mencurigakan menggunakan kecerdasan buatan. Dengan StockGuard, Anda
           dapat memastikan keamanan stok barang dan meningkatkan efisiensi
           manajemen inventaris.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* Gambar */}
-      <div className="flex-1">
+      <motion.div
+        className="flex-1"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <img
           src={stockImage}
           alt="StockGuard Illustration"
           className="w-full h-auto rounded-xl shadow-md"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

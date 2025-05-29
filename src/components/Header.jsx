@@ -1,31 +1,56 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Header = () => {
+  // Fungsi scroll ke #about saat tombol diklik
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="pt-36 px-4">
       <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto">
-        <h1 className="text-black text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+        <motion.h1
+          className="text-gray-800 text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           Stock Guard - Kendali Cerdas atas Stok
           <span className="block">Aman Tanpa Khawatir</span>
-        </h1>
+        </motion.h1>
 
-        <p className="mt-5 text-gray-500 text-base sm:text-lg md:text-[17px] max-w-4xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque
-          pariatur quod, doloribus illum molestias voluptates, quasi velit
-          asperiores officiis vero, repudiandae dolorum eius amet. Deserunt
-          deleniti sapiente consequuntur cupiditate, animi nulla ipsa corporis
-          possimus fuga nesciunt saepe quo debitis ut eaque perferendis
-          quibusdam sit. Neque itaque velit natus, magnam deleniti eum inventore
-          fugiat autem possimus ad sapiente illo, fuga, doloremque blanditiis
-          facilis magni quam voluptates dolores quas in! Quis.
-        </p>
+        <motion.p
+          className="mt-10 text-gray-500 text-base sm:text-lg md:text-[17px] max-w-4xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
+          StockGuard adalah solusi pengamanan stok barang yang menggabungkan
+          teknologi sensor berat dan kamera dengan kecerdasan buatan untuk
+          memantau serta melacak pergerakan barang secara real-time. Sistem ini
+          dirancang untuk mencegah kehilangan dan tindakan curang oleh pegawai
+          dengan mendeteksi perubahan berat di rak serta menganalisis perilaku
+          mencurigakan secara otomatis.
+        </motion.p>
 
-        <div>
-          <button className="flex items-center gap-2 mt-8 bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition cursor-pointer hover:text-amber-400">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1, duration: 0.7, ease: "easeInOut" }}
+        >
+          <button
+            onClick={scrollToAbout}
+            className="flex items-center gap-2 mt-10 md:mt-15 bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition cursor-pointer hover:text-amber-400"
+            aria-label="Get Started - Scroll to About Section"
+          >
             Get Started <FaArrowRight className="text-[15px]" />
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
