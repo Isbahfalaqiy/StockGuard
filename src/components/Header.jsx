@@ -20,8 +20,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Stock Guard - Kendali Cerdas atas Stok
-          <span className="block">Aman Tanpa Khawatir</span>
+          StoreGuard<span className="block">Amankan Gudang Anda!</span>
         </motion.h1>
 
         <motion.p
@@ -30,7 +29,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          StockGuard adalah solusi pengamanan stok barang yang menggabungkan
+          StoreGuard adalah solusi pengamanan stok barang yang menggabungkan
           teknologi sensor berat dan kamera dengan kecerdasan buatan untuk
           memantau serta melacak pergerakan barang secara real-time. Sistem ini
           dirancang untuk mencegah kehilangan dan tindakan curang oleh pegawai

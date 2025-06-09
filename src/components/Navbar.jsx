@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold text-xl">
           <img src={Guard} className="w-8 h-8" />
-          <span>StockGuard</span>
+          <span>StoreGuard</span>
         </div>
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">

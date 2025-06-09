@@ -105,7 +105,7 @@ const CaraKerja = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Cara Kerja StockGuard
+          Cara Kerja StoreGuard
         </motion.h2>
         <motion.p
           className="text-gray-600"

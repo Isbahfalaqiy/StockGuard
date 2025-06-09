@@ -9,7 +9,7 @@ import notifikasi from "../assets/images/notifikasi.jpg";
 const fiturData = {
   "Pemantauan Berat Otomatis": {
     deskripsi:
-      "Stock Guard dilengkapi dengan sensor berat presisi tinggi yang mampu mendeteksi perubahan berat barang secara langsung. Setiap kali terjadi pengambilan atau penambahan stok, sistem akan mencatat perubahan tersebut secara otomatis.",
+      "StoreGuard dilengkapi dengan sensor berat presisi tinggi yang mampu mendeteksi perubahan berat barang secara langsung. Setiap kali terjadi pengambilan atau penambahan stok, sistem akan mencatat perubahan tersebut secara otomatis.",
     gambar: berat,
   },
   "Analisis Visual Real-time": {
@@ -19,7 +19,7 @@ const fiturData = {
   },
   "Kecerdasan Buatan (AI)": {
     deskripsi:
-      "Stock Guard memanfaatkan AI untuk menganalisis data dari sensor dan kamera, mendeteksi aktivitas tidak wajar, serta membedakan antara perilaku normal dan mencurigakan.",
+      "StoreGuard memanfaatkan AI untuk menganalisis data dari sensor dan kamera, mendeteksi aktivitas tidak wajar, serta membedakan antara perilaku normal dan mencurigakan.",
     gambar: ai,
   },
   "Pencegahan Kehilangan Stok": {
@@ -29,7 +29,7 @@ const fiturData = {
   },
   "Notifikasi Otomatis": {
     deskripsi:
-      "Stock Guard menghasilkan laporan otomatis dan mengirim notifikasi instan ketika terdeteksi aktivitas mencurigakan, membantu tim merespons dengan cepat.",
+      "StoreGuard menghasilkan laporan otomatis dan mengirim notifikasi instan ketika terdeteksi aktivitas mencurigakan, membantu tim merespons dengan cepat.",
     gambar: notifikasi,
   },
 };
@@ -59,7 +59,7 @@ const Fitur = () => {
           transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
         >
-          Fitur Utama Yang Terdapat Pada Website StockGuard
+          Fitur Utama Yang Terdapat Pada Website StoreGuard
         </motion.p>
       </div>
 
