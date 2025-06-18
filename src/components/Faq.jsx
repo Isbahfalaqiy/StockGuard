@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "Apakah StoreGuard bisa digunakan untuk semua jenis barang?",
+    question: "Apakah StorGuard bisa digunakan untuk semua jenis barang?",
     answer:
-      "Ya, StoreGuard dirancang fleksibel dan dapat diterapkan untuk berbagai jenis barang yang disimpan di rak dengan sensor berat.",
+      "Ya, StorGuard dirancang fleksibel dan dapat diterapkan untuk berbagai jenis barang yang disimpan di rak dengan sensor berat.",
   },
   {
-    question: "Bagaimana dengan keamanan data yang tersimpan di StoreGuard?",
+    question: "Bagaimana dengan keamanan data yang tersimpan di StorGuard?",
     answer:
       "Data disimpan dengan protokol keamanan tinggi dan enkripsi untuk memastikan kerahasiaan dan integritas informasi.",
   },
   {
     question:
-      "Apakah StoreGuard bisa terintegrasi dengan sistem inventaris yang sudah ada?",
+      "Apakah StorGuard bisa terintegrasi dengan sistem inventaris yang sudah ada?",
     answer:
-      "StoreGuard mendukung integrasi API agar bisa terhubung dengan software manajemen inventaris yang digunakan perusahaan Anda.",
+      "StorGuard mendukung integrasi API agar bisa terhubung dengan software manajemen inventaris yang digunakan perusahaan Anda.",
   },
   {
     question: "Apakah ada dukungan teknis jika terjadi masalah?",
     answer:
-      "Tersedia layanan support 24/7 untuk membantu Anda mengatasi kendala teknis dan pertanyaan terkait penggunaan StoreGuard.",
+      "Tersedia layanan support 24/7 untuk membantu Anda mengatasi kendala teknis dan pertanyaan terkait penggunaan StorGuard.",
   },
 ];
 
@@ -44,7 +44,7 @@ const Faq = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Pertanyaan seputar penggunaan StoreGuard
+            Pertanyaan seputar penggunaan StorGuard
           </motion.h2>
           <motion.p
             className="text-md text-gray-600"
@@ -54,7 +54,7 @@ const Faq = () => {
             viewport={{ once: true }}
           >
             Temukan jawaban atas pertanyaan umum mengenai fitur, keamanan, dan
-            cara kerja sistem StoreGuard untuk membantu Anda mengelola
+            cara kerja sistem StorGuard untuk membantu Anda mengelola
             persediaan dengan lebih aman dan efisien.
           </motion.p>
         </div>

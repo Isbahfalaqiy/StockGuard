@@ -67,7 +67,7 @@ const Contact = () => {
                     <h3 className="text-lg font-medium text-gray-800">
                       Contact
                     </h3>
-                    <p className="text-gray-600">Telepon: +628123456789</p>
+                    <p className="text-gray-600">Telepon: +628990856457</p>
                     <p className="text-gray-600">Email: Sulaiman@gmail.com</p>
                     <p className="text-gray-600">Email: isbah@gmail.com</p>
                   </div>

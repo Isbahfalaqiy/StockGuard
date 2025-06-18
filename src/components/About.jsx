@@ -32,7 +32,7 @@ const About = () => {
           transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
         >
-          StoreGuard
+          StorGuard
         </motion.h2>
         <motion.p
           className="text-gray-700 text-justify leading-relaxed"
@@ -41,12 +41,12 @@ const About = () => {
           transition={{ delay: 0.4, duration: 1 }}
           viewport={{ once: true }}
         >
-          StoreGuard adalah sistem pengamanan stok barang yang menggabungkan
+          StorGuard adalah sistem pengamanan stok barang yang menggabungkan
           teknologi sensor berat dan kamera dengan computer vision untuk
           memantau dan melacak pergerakan barang secara real-time. Sistem ini
           membantu mencegah kehilangan atau tindakan curang oleh pegawai dengan
           mendeteksi perubahan berat di rak dan menganalisis perilaku
-          mencurigakan menggunakan kecerdasan buatan. Dengan StoreGuard, Anda
+          mencurigakan menggunakan kecerdasan buatan. Dengan StorGuard, Anda
           dapat memastikan keamanan stok barang dan meningkatkan efisiensi
           manajemen inventaris.
         </motion.p>

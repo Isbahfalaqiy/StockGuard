@@ -19,7 +19,7 @@ const Manfaat = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        Manfaat StoreGuard
+        Manfaat StorGuard
       </motion.h2>
       <motion.p
         className="text-gray-600 text-center"
@@ -28,7 +28,7 @@ const Manfaat = () => {
         transition={{ delay: 0.2, duration: 1 }}
         viewport={{ once: true }}
       >
-        StoreGuard memliki beberapa manfaat yang dapat membantu Anda dalam
+        StorGuard memliki beberapa manfaat yang dapat membantu Anda dalam
         mengelola stok barang dengan lebih baik.
       </motion.p>
       <motion.div
