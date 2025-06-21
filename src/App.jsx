@@ -10,6 +10,7 @@ import Manfaat from "./components/Manfaat";
 import CaraKerja from "./components/CaraKerja";
 import background from "./assets/images/bg.jpg";
 import css from "./App";
+import PricingSection from "./components/PricingSection";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       <About />
       <Fitur />
       <CaraKerja />
+      <PricingSection />
       <Manfaat />
       <Faq />
       <Contact />

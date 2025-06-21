@@ -23,7 +23,7 @@ const Navbar = () => {
           <span>StorGuard</span>
         </div>
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+        <ul className="hidden md:flex items-center gap-6 text-white font-medium">
           <li>
             <a
               href="#"
@@ -74,6 +74,19 @@ const Navbar = () => {
               }`}
             >
               Cara Kerja
+            </a>
+          </li>
+          <li>
+            <a
+              href="#price"
+              onClick={() => handleMenuClick("price")}
+              className={`px-4 py-1 rounded-full cursor-pointer ${
+                activeMenu === "price"
+                  ? "text-yellow-400 font-semibold bg-gray-800"
+                  : "hover:text-white"
+              }`}
+            >
+              Price
             </a>
           </li>
           <li>
