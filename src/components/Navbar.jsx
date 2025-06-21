@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Guard from "../assets/images/defend.jpg";
+import Guard from "../assets/images/logo.jpg";
 import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
