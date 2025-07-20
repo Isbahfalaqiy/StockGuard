@@ -7,13 +7,11 @@ const Contact = () => {
         <div className="mb-4">
           <div className="mb-6 max-w-4xl text-center md:mx-auto md:mb-12">
             <p className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Contact
+              Kontak
             </p>
             <p className="mx-auto mt-4 max-w-3xl text-gray-600">
-              Kami siap membantu Anda! Jika Anda memiliki pertanyaan, masukan,
-              atau ingin bekerja sama, jangan ragu untuk menghubungi kami
-              melalui form di bawah ini atau media sosial kami. Tim kami akan
-              merespons secepat mungkin.
+              kami siap menerima kritik & saran, serta membantu dengan informasi
+              atau pertanyaan lebih lanjut tentang Go Fit Meal.
             </p>
           </div>
         </div>
@@ -42,8 +40,16 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-gray-800">
                       Alamat
                     </h3>
-                    <p className="text-gray-600">jl.Sulaimani No. 1</p>
-                    <p className="text-gray-600">Jakarta, Indonesia</p>
+                    <p className="text-gray-600">
+                      Jl. Sawo No.26A 16424 Depok Jawa Barat
+                    </p>
+                    <p className="text-gray-600">
+                      Cisitu Lama III No.68a, Dago, Kec. Coblong, Kota Bandung
+                    </p>
+                    <p className="text-gray-600">
+                      Jl. Jati Mataram No.320 RT Kec. Mlati, Kab. Sleman,
+                      Yogyakarta 55284
+                    </p>
                   </div>
                 </li>
 
@@ -65,41 +71,16 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-800">
-                      Contact
+                      Kontak
                     </h3>
-                    <p className="text-gray-600">Telepon: +628990856457</p>
-                    <p className="text-gray-600">Email: Sulaiman@gmail.com</p>
-                    <p className="text-gray-600">Email: isbah@gmail.com</p>
+                    <p className="text-gray-600">Telepon: +62881-0105-84318</p>
+                    <p className="text-gray-600">
+                      Email: gofitmeal24@gmail.com
+                    </p>
                   </div>
                 </li>
 
                 {/* Working Hours */}
-                <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                      <path d="M12 7v5l3 3"></path>
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-800">
-                      Jam Kerja
-                    </h3>
-                    <p className="text-gray-600">
-                      Senin - Jumat: 08:00 - 17:00
-                    </p>
-                    <p className="text-gray-600">
-                      Sabtu & Minggu: 08:00 - 12:00
-                    </p>
-                  </div>
-                </li>
               </ul>
             </div>
 
@@ -169,7 +150,7 @@ const Contact = () => {
                     type="submit"
                     className="w-full bg-black text-yellow-400 px-6 py-3 font-semibold rounded-md cursor-pointer"
                   >
-                    Send Message
+                    Kirim Pesan
                   </button>
                 </div>
               </form>

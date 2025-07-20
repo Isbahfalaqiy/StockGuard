@@ -2,15 +2,19 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
-import Fitur from "./components/Fitur";
+import Menu from "./components/Menu";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Faq from "./components/Faq";
-import Manfaat from "./components/Manfaat";
+import Subs from "./components/form";
 import CaraKerja from "./components/CaraKerja";
 import background from "./assets/images/bg.jpg";
+import Testimonials from "./components/Testimonials";
 import css from "./App";
 import PricingSection from "./components/PricingSection";
+import TeamProfiles from "./components/teamProfiles";
+import DoctorConsultation from "./components/DrConsultant";
+import WhyEatHealthy from "./components/WhyEatHealthy";
 
 const App = () => {
   return (
@@ -32,10 +36,15 @@ const App = () => {
 
       {/* About berada di luar div background, jadi tidak terkena background/overlay */}
       <About />
-      <Fitur />
+      <TeamProfiles />
+      <Menu />
       <CaraKerja />
       <PricingSection />
-      <Manfaat />
+      <Subs />
+      <WhyEatHealthy />
+      <DoctorConsultation />
+
+      <Testimonials />
       <Faq />
       <Contact />
       <Footer />

@@ -20,7 +20,8 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          StorGuard<span className="block">Amankan Gudang Anda!</span>
+          SOLUSI MAKAN SEHATMU !
+          <span className="block">Cheap, Tasty and Healty</span>
         </motion.h1>
 
         <motion.p
@@ -29,12 +30,9 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          StorGuard adalah solusi pengamanan stok barang yang menggabungkan
-          teknologi sensor berat dan kamera dengan kecerdasan buatan untuk
-          memantau serta melacak pergerakan barang secara real-time. Sistem ini
-          dirancang untuk mencegah kehilangan dan tindakan curang oleh pegawai
-          dengan mendeteksi perubahan berat di rak serta menganalisis perilaku
-          mencurigakan secara otomatis.
+          Sudah coba hidup sehat tapi gagal karena makan sembarangan? GoFitMeal
+          hadir buat kamu yang butuh makanan enak, sehat, dan gak bikin kantong
+          bolong.
         </motion.p>
 
         <motion.div
@@ -47,7 +45,7 @@ const Header = () => {
             className="flex items-center gap-2 mt-10 md:mt-15 bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition cursor-pointer hover:text-amber-400"
             aria-label="Get Started - Scroll to About Section"
           >
-            Get Started <FaArrowRight className="text-[15px]" />
+            Mulai! <FaArrowRight className="text-[15px]" />
           </button>
         </motion.div>
       </div>

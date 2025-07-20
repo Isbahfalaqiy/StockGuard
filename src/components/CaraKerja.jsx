@@ -1,76 +1,35 @@
 import React from "react";
+import c1 from "../assets/images/c1.jpg";
+import c2 from "../assets/images/c2.jpg";
+import c3 from "../assets/images/c3.jpg";
+import c4 from "../assets/images/c4.jpg";
 import { motion } from "framer-motion";
-import {
-  ShieldCheck,
-  Eye,
-  Scale,
-  Brain,
-  RefreshCcw,
-  AlertCircle,
-  Link,
-  BarChart2,
-} from "lucide-react";
 
+// Data Langkah
 const data = [
   {
-    icon: (
-      <ShieldCheck className="w-10 h-10 text-blue-600 group-hover:text-blue-800 transition-colors duration-300" />
-    ),
-    title: "Pemasangan Perangkat",
-    desc: "Sensor berat dan kamera AI dipasang pada rak untuk pemantauan awal.",
+    img: c1,
+    title: "Isi Form Langganan",
+    desc: "Buka halaman Subscription form, isi data diri dan pilih Paket (Monthly/Trial/Pay Per Meal).",
   },
   {
-    icon: (
-      <Eye className="w-10 h-10 text-green-600 group-hover:text-green-800 transition-colors duration-300" />
-    ),
-    title: "Pemantauan Real-Time",
-    desc: "Sensor dan kamera bekerja 24/7 untuk mengawasi setiap aktivitas.",
+    img: c2,
+    title: "Lakukan Pembayaran",
+    desc: "Setelah submit form, lakukan pembayaran ke rekening yang tertera.",
   },
   {
-    icon: (
-      <Scale className="w-10 h-10 text-yellow-600 group-hover:text-yellow-800 transition-colors duration-300" />
-    ),
-    title: "Deteksi Perubahan Berat",
-    desc: "Sensor mencatat perubahan berat sekecil apa pun saat barang diambil atau ditambah.",
+    img: c3,
+    title: "Konfirmasi Lewat WhatsApp",
+    desc: "Setelah bayar, klik tombol konfirmasi via WhatsApp. Tim kami akan verifikasi dan siapkan jadwal pengantaranmu.",
   },
   {
-    icon: (
-      <Brain className="w-10 h-10 text-purple-600 group-hover:text-purple-800 transition-colors duration-300" />
-    ),
-    title: "Analisis Visual AI",
-    desc: "Sistem AI mendeteksi wajah dan gerakan mencurigakan dari pegawai.",
-  },
-  {
-    icon: (
-      <RefreshCcw className="w-10 h-10 text-pink-600 group-hover:text-pink-800 transition-colors duration-300" />
-    ),
-    title: "Sinkronisasi Data",
-    desc: "Data berat dan video digabungkan untuk validasi pergerakan barang.",
-  },
-  {
-    icon: (
-      <AlertCircle className="w-10 h-10 text-red-600 group-hover:text-red-800 transition-colors duration-300" />
-    ),
-    title: "Peringatan Otomatis",
-    desc: "Jika ada anomali, sistem langsung mengirim notifikasi dan menyimpan bukti.",
-  },
-  {
-    icon: (
-      <Link className="w-10 h-10 text-indigo-600 group-hover:text-indigo-800 transition-colors duration-300" />
-    ),
-    title: "Integrasi Sistem",
-    desc: "Terhubung dengan sistem ERP untuk pembaruan stok secara otomatis.",
-  },
-  {
-    icon: (
-      <BarChart2 className="w-10 h-10 text-cyan-600 group-hover:text-cyan-800 transition-colors duration-300" />
-    ),
-    title: "Pelaporan & Audit",
-    desc: "Laporan aktivitas dan anomali tersedia untuk audit dan evaluasi.",
+    img: c4,
+    title: "Pengantaran Ke Lokasimu",
+    desc: "Kami akan mengirimkan makanan langsung ke alamatmu.",
   },
 ];
 
-// Variants
+// Animation Variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -96,7 +55,7 @@ const itemVariants = {
 
 const CaraKerja = () => {
   return (
-    <div className="px-4 py-12 bg-gray-50" id="carakerja">
+    <div className="px-4 py-12 bg-green-50" id="carakerja">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
@@ -105,26 +64,26 @@ const CaraKerja = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Cara Kerja StorGuard
+          Alur Pemesanan dan Berlangganan
         </motion.h2>
         <motion.p
-          className="text-gray-600"
+          className="text-gray-600 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
         >
-          Menggabungkan sensor berat dan AI untuk keamanan stok secara
-          real-time.
+          Ikuti langkah mudah berikut untuk menikmati layanan GoFitMeal secara
+          rutin dan praktis!
         </motion.p>
       </div>
 
+      {/* Langkah-Langkah */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto cursor-pointer"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         {data.map((item, index) => (
@@ -132,12 +91,12 @@ const CaraKerja = () => {
             key={index}
             variants={itemVariants}
             custom={index}
-            className="group bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
-            <div className="mb-4">{item.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              {item.title}
-            </h3>
+            <img src={item.img} alt={item.title} className="h-16 mb-4" />
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">{`${
+              index + 1
+            }. ${item.title}`}</h3>
             <p className="text-gray-600 text-sm">{item.desc}</p>
           </motion.div>
         ))}

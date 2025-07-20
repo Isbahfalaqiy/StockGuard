@@ -4,25 +4,24 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "Apakah StorGuard bisa digunakan untuk semua jenis barang?",
+    question: "Seperti apa layanan Go Fit Meal itu?",
     answer:
-      "Ya, StorGuard dirancang fleksibel dan dapat diterapkan untuk berbagai jenis barang yang disimpan di rak dengan sensor berat.",
+      "Go Fit Meal adalah layanan katering sehat yang menyajikan makanan bergizi, praktis, dan enak — dikirim langsung ke tempatmu setiap hari. Kami hadir untuk mahasiswa, pekerja, atau siapa pun yang ingin hidup sehat tanpa ribet.",
   },
   {
-    question: "Bagaimana dengan keamanan data yang tersimpan di StorGuard?",
+    question: "Bagaimana sistem penggunaan Go Fit Meal?",
     answer:
-      "Data disimpan dengan protokol keamanan tinggi dan enkripsi untuk memastikan kerahasiaan dan integritas informasi.",
+      "gofitmeals sistemnya berlangganan 1 bulan dan 7 hari atau dapat dibayar per box, jika costumer yang berlangganan sedang tidak bisa memakan makananan go fit meals, dapat menggunakan kuota skip day sebanyak 3x per batch. anda akan diarahkan khusus untuk bisa mengakses ke website whats app Go fit Meal..",
   },
   {
-    question:
-      "Apakah StorGuard bisa terintegrasi dengan sistem inventaris yang sudah ada?",
+    question: "Apa saja isi dalam satu box Go Fit Meal?",
     answer:
       "StorGuard mendukung integrasi API agar bisa terhubung dengan software manajemen inventaris yang digunakan perusahaan Anda.",
   },
   {
-    question: "Apakah ada dukungan teknis jika terjadi masalah?",
+    question: "Kapan estimasi pengantaran makanan Go Fit Meal?",
     answer:
-      "Tersedia layanan support 24/7 untuk membantu Anda mengatasi kendala teknis dan pertanyaan terkait penggunaan StorGuard.",
+      "Estimasi jam pengantaran makanan untuk makan siang atau lunch sebelum jam 13:00 dan makan malam atau dinner sebelum jam 18:00.",
   },
 ];
 
@@ -44,7 +43,7 @@ const Faq = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Pertanyaan seputar penggunaan StorGuard
+            Pertanyaan Seputar GoFitMeal
           </motion.h2>
           <motion.p
             className="text-md text-gray-600"
@@ -53,9 +52,9 @@ const Faq = () => {
             transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
           >
-            Temukan jawaban atas pertanyaan umum mengenai fitur, keamanan, dan
-            cara kerja sistem StorGuard untuk membantu Anda mengelola
-            persediaan dengan lebih aman dan efisien.
+            FAQ menjadi salah satu elemen penting dan tidak terpisahkan dari
+            sebuah perusahaan. Hal ini karena FAQ menawarkan berbagai fungsi
+            serta manfaat yang dapat membantu perusahaan.
           </motion.p>
         </div>
 

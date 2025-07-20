@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold text-xl">
           <img src={Guard} className="w-8 h-8" />
-          <span>StorGuard</span>
+          <span>GoFitMeal</span>
         </div>
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 text-white font-medium">
@@ -52,15 +52,15 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#fitur"
-              onClick={() => handleMenuClick("fitur")}
+              href="#menu"
+              onClick={() => handleMenuClick("menu")}
               className={`px-4 py-1 rounded-full cursor-pointer ${
-                activeMenu === "fitur"
+                activeMenu === "menu"
                   ? "text-yellow-400 font-semibold bg-gray-800"
                   : "hover:text-white"
               }`}
             >
-              Fitur
+              Produk Kami
             </a>
           </li>
           <li>
@@ -73,7 +73,7 @@ const Navbar = () => {
                   : "hover:text-white"
               }`}
             >
-              Cara Kerja
+              Pemesanan
             </a>
           </li>
           <li>
@@ -86,20 +86,20 @@ const Navbar = () => {
                   : "hover:text-white"
               }`}
             >
-              Price
+              Harga
             </a>
           </li>
           <li>
             <a
-              href="#manfaat"
-              onClick={() => handleMenuClick("manfaat")}
+              href="#form"
+              onClick={() => handleMenuClick("form")}
               className={`px-4 py-1 rounded-full cursor-pointer ${
-                activeMenu === "manfaat"
+                activeMenu === "form"
                   ? "text-yellow-400 font-semibold bg-gray-800"
                   : "hover:text-white"
               }`}
             >
-              Manfaat
+              Form
             </a>
           </li>
           <li>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 : "bg-white text-black hover:bg-yellow-400"
             }`}
           >
-            Contact
+            Kontak
           </a>
         </div>
 
@@ -176,15 +176,15 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#fitur"
-                onClick={() => handleMenuClick("fitur")}
+                href="#price"
+                onClick={() => handleMenuClick("price")}
                 className={`px-4 py-1 rounded-full cursor-pointer ${
-                  activeMenu === "fitur"
+                  activeMenu === "price"
                     ? "text-yellow-400 font-semibold bg-gray-800"
                     : "hover:text-white"
                 }`}
               >
-                Fitur
+                Harga
               </a>
             </li>
             <li>
@@ -197,20 +197,20 @@ const Navbar = () => {
                     : "hover:text-white"
                 }`}
               >
-                Cara Kerja
+                Pemesanan
               </a>
             </li>
             <li>
               <a
-                href="#manfaat"
-                onClick={() => handleMenuClick("manfaat")}
+                href="#form"
+                onClick={() => handleMenuClick("form")}
                 className={`px-4 py-1 rounded-full cursor-pointer ${
-                  activeMenu === "manfaat"
+                  activeMenu === "form"
                     ? "text-yellow-400 font-semibold bg-gray-800"
                     : "hover:text-white"
                 }`}
               >
-                Manfaat
+                Subcription
               </a>
             </li>
             <li>
@@ -236,7 +236,7 @@ const Navbar = () => {
                 : "bg-white text-black hover:bg-yellow-400"
             }`}
           >
-            Contact
+            Kontak
           </a>
         </div>
       )}
